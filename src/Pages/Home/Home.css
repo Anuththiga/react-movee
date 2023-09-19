@@ -1,0 +1,49 @@
+.banner-image {
+    height: 600px;
+}
+
+.banner-image > img {
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.banner-image__overlay {
+    position: absolute;
+    padding: 5rem;
+    bottom: 0px;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: flex-start;
+    background-image: linear-gradient(rgb(0,0,0,0), rgb(0,0,0,1));
+    opacity: 1;
+    transition: opacity .3s;
+}
+
+.banner-image__title {
+    font-weight: 900;
+    font-size: 4rem;
+    text-align: left;
+    margin-bottom: 0.4rem;
+}
+
+.banner-image__runtime {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.banner-image__rating {
+    margin-left: 3rem;
+}
+
+.banner-image__description {
+    font-size: 1rem;
+    font-style: italic;
+    display: flex;
+    text-align: left;
+    margin-bottom: 0.25rem;
+    width: 50%;
+}

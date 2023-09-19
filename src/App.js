@@ -1,6 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Trending from "./Pages/Trending/Trending";
+import Home from "./Pages/Home/Home";
 import Header from "./Components/Header/Header";
 import Movies from "./Pages/Movies/Movies";
 import Series from "./Pages/Series/Series";
@@ -11,7 +12,8 @@ function App() {
       <BrowserRouter>
       <Header />
           <Routes>
-            <Route path="/" element={<Trending/>} />
+            <Route path="/" element={<Home/>} />
+            <Route path="/trending" element={<Trending/>} />
             <Route path="/movies" element={<Movies/>} />
             <Route path="/series" element={<Series/>} />
           </Routes>
