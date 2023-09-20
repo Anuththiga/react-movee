@@ -4,14 +4,15 @@ import React, { useEffect, useState } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import MovieList from '../../Components/MovieList/MovieList';
 
 
 const Home = () => {
-    const [popular, setPopular] = useState([]);
+    const [movies, setMovies] = useState([]);
     useEffect(() => {
-        axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}`)
+        axios.get(`https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_API_KEY}`)
         .then((response) => {
-            setPopular(response.data.results)
+            setMovies(response.data.results)
             console.log(response.data.results)
         })
     }, [])
@@ -27,7 +28,7 @@ const Home = () => {
                 showStatus={false}
             >
                 {
-                    popular.map((movie) => (
+                    movies.map((movie) => (
                         <div>
                             <div className='banner-image'>
                                 <img src={`https://image.tmdb.org/t/p/original${movie && movie.backdrop_path}`} />
@@ -46,8 +47,10 @@ const Home = () => {
                         </div>
                     ))
                 }
-
             </Carousel>
+            <MovieList
+                movies={movies}
+            />
         </div>
     </>
   )

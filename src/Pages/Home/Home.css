@@ -23,6 +23,10 @@
     transition: opacity .3s;
 }
 
+.banner-image__overlay:hover {
+    opacity: 1;
+}
+
 .banner-image__title {
     font-weight: 900;
     font-size: 4rem;
