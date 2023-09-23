@@ -4,6 +4,7 @@ import Home from "./Pages/Home/Home";
 import Header from "./Components/Header/Header";
 import Movies from "./Pages/Movies/Movies";
 import Series from "./Pages/Series/Series";
+import SinglePage from "./Pages/SinglePage/SinglePage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/movies" element={<Movies/>} />
+            <Route path="/:type/:id" element={<SinglePage />} />
             <Route path="/series" element={<Series/>} />
           </Routes>
       </BrowserRouter>

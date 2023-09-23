@@ -2,17 +2,18 @@ import React from 'react';
 import "./MovieList.css"
 import Card from '../Card/Card';
 
-const MovieList = ({movies}) => {
+const MovieList = ({ lists, type}) => {
 
   return (
     <div className='movie__list'>
       <h2 className='list__title'>TRENDING</h2>
       <div className='list__cards'>
         {
-          movies.map((movie) => (
+          lists.map((list) => (
             <Card 
-              movie={movie}
-              key={movie.id}
+              list={list}
+              key={list.id}
+              type={list.media_type ? list.media_type : type}
               />
           ))
         }

@@ -51,7 +51,8 @@ const Home = () => {
             </Carousel>
             <Container>
             <MovieList
-                movies={movies}
+                lists={movies}
+                type="all"
             />
             </Container>
         </div>

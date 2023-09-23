@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import "./Card.css";
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
+import { Link } from "react-router-dom"
 
-const Card = ({movie}) => {
+const Card = ({list, type}) => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         setTimeout(() => {
             setIsLoading(false)
         }, 1500)
-    }, [])
+    }, []);
 
   return (
     <>
@@ -20,17 +21,19 @@ const Card = ({movie}) => {
             </SkeletonTheme>
         </div>
         :
+        <Link to={`/${type}/${list.id}`} style={{ textDecoration: "none", color: "white" }}>
         <div className='card'>
-            <img className='card__img' src={`https://image.tmdb.org/t/p/original${movie?movie.poster_path:""}`} />
+            <img className='card__img' src={`https://image.tmdb.org/t/p/original${list?list.poster_path:""}`} />
             <div className='card__overlay'>
-                <div className='card__title'>{movie.original_title ? movie.original_title : movie.name}</div>
+                <div className='card__title'>{list.original_title ? list.original_title : list.name}</div>
                 <div className='card__runtime'>
-                    {movie?movie.release_date:""}
-                    <span className='card_rating'>{movie?movie.vote_average:""}</span>
+                    {list?list.release_date:""}
+                    <span className='card_rating'>{list?list.vote_average:""}</span>
                 </div>
-                <div className='card__description'>{movie ? movie.overview.slice(0,120)+"..." : ""}</div>
+                <div className='card__description'>{list ? list.overview.slice(0,120)+"..." : ""}</div>
             </div>
         </div>
+        </Link>
     }
     
     </>
