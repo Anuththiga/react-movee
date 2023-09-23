@@ -1,0 +1,95 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.page__intro {
+    width: 80%;
+}
+
+.page__backdrop {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: 0 35%;
+}
+
+.page__detail {
+    align-items: center;
+    width: 75%;
+    display: flex;
+    position: relative;
+    bottom: 220px;
+}
+
+.page__detailleft {
+    margin-right: 30px;
+}
+
+.page_poster {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.86) 0px 22px 40px 6px;
+}
+
+.page__detailright {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    justify-content: space-between;
+}
+
+.page__detailright-top > div {
+    margin-bottom: .5rem;
+    text-shadow: 0px 0px 5px #000000;
+}
+
+.page__name {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.movie__voteCount {
+    margin-left: 1rem;
+}
+
+.page__genres {
+    margin: 1.25rem 0;
+}
+
+.page__genre {
+    padding: .5rem;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin-right: 1rem;
+}
+
+.page__detailright-bottom {
+    flex: 0.8;
+    margin: 2rem 0;
+}
+
+.synopsis-text {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+    font-weight: 600;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.synopsis-text > div:last-of-type {
+    margin-left: auto;
+}
+
+.page__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 90px;
+    width: 60%;
+}

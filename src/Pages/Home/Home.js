@@ -5,6 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import MovieList from '../../Components/MovieList/MovieList';
+import { Container } from '@mui/material';
 
 
 const Home = () => {
@@ -48,9 +49,12 @@ const Home = () => {
                     ))
                 }
             </Carousel>
+            <Container>
             <MovieList
-                movies={movies}
+                lists={movies}
+                type="all"
             />
+            </Container>
         </div>
     </>
   )
