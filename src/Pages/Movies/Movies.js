@@ -45,7 +45,8 @@ const Movies = () => {
       />
       <div className='trending'>
        <MovieList
-        movies={content}
+        lists={content}
+        type="movie"
         />
       </div>
       {
