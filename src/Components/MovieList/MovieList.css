@@ -12,3 +12,10 @@
     flex-direction: wrap;
     justify-content: center;
 }
+
+@media (max-width: 900px) {
+    .list__cards {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

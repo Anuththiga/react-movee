@@ -2,7 +2,7 @@
     height: 600px;
 }
 
-.banner-image > img {
+.banner-image>img {
     width: 100%;
     display: block;
     margin: auto;
@@ -18,7 +18,7 @@
     width: 100%;
     justify-content: flex-end;
     align-items: flex-start;
-    background-image: linear-gradient(rgb(0,0,0,0), rgb(0,0,0,1));
+    background-image: linear-gradient(rgb(0, 0, 0, 0), rgb(0, 0, 0, 1));
     opacity: 1;
     transition: opacity .3s;
 }
@@ -50,4 +50,28 @@
     text-align: left;
     margin-bottom: 0.25rem;
     width: 50%;
+}
+
+@media (max-width: 900px) {
+    .banner-image {
+        height: 320px;
+    }
+
+    .banner-image__overlay {
+        padding: 0;
+        margin: 0 0.5rem;
+    }
+
+    .banner-image__title {
+        display: none;
+    }
+
+    .banner-image__runtime {
+        display: none;
+    }
+
+    .banner-image__description {
+        display: none;
+    }
+
 }

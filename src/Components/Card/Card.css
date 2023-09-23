@@ -31,7 +31,7 @@
     flex-direction: column;
     width: 85%;
     justify-content: flex-end;
-    background-image: linear-gradient(rgb(0,0,0,0), rgb(0,0,0,1));
+    background-image: linear-gradient(rgb(0, 0, 0, 0), rgb(0, 0, 0, 1));
     opacity: 0;
     transition: opacity .2s;
 }
@@ -59,4 +59,10 @@
     font-style: italic;
     font-size: .75rem;
     margin-bottom: 0.25rem;
+}
+
+@media (max-width: 900px) {
+    .card {
+        margin: 0.5rem;
+    }
 }
